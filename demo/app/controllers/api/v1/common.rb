@@ -7,17 +7,11 @@ module API
           format :json
 
           rescue_from Mongoid::Errors::DocumentNotFound do |e|
-            status 404
-
-            present message: e.message
-            present status: 404
+            error_response(message: e.message, status: 404)
           end
 
           rescue_from :all do |e|
-            status 500
-
-            present message: "Internal Server Error"
-            present status: 500
+           error_response(message: "Internal Server Error", status: 500)
           end
 
         end
