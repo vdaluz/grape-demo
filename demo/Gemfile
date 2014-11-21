@@ -41,3 +41,5 @@ gem 'spring',        group: :development
 gem 'grape'
 
 gem 'mongoid'
+
+gem 'grape-swagger'
