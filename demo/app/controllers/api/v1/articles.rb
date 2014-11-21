@@ -25,13 +25,11 @@ module API
         params do
           requires :title, type: String, desc: "Article title."
           requires :content, type: String, desc: "Article content."
-          optional :tags, type: String, desc: "Article tags (comma separated"
         end
         post do
           Article.create!({
             title: params[:title],
-            content: params[:content],
-            tags: params[:tags]
+            content: params[:content]
           })
         end
 

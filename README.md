@@ -116,8 +116,8 @@ Then create `config/initializers/swagger.rb` with the following contents:
 
 ```ruby
 
-GrapeSwaggerRails.options.url = 'swagger_doc.json’
-GrapeSwaggerRails.options.app_url=‘/api'
+GrapeSwaggerRails.options.url = 'swagger_doc.json'
+GrapeSwaggerRails.options.app_url='/api'
 
 ```
 
